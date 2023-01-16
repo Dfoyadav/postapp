@@ -1,0 +1,30 @@
+<div class="container mt-4 border">
+  <div class="container-content">
+    <h1 class="m-3">Welcome Postapp</h1>
+    <div class="m-3">
+    <p class="">Siddharth Nagar Ki Sari khabro Ke liye jude rhe aap log</p>
+    <h2>Siddharth Nagar </h2>
+      <span>
+        <ul>
+          <li>Naugarh</li>
+          <li>Bansi</li>
+          <li>Belauha</li>
+          <li>Barhani</li>
+          <li>Itwa</li>
+          <li>Shoharthgarh</li>
+          <li>Dumariyaganj</li>
+      
+  <% @posts.each do |post| %>
+  <tr>
+    <div style="text-align: center;">
+    <h1><td><%= post.title %></td></h1>
+    <h3><td><%= post.description %></td></h3><br>
+    <%= image_tag post.image, style: "width: 500px;height:300px;" if post.image.present? %>
+    </div>
+  </tr>
+<% end %>
+        </ul>
+      </span>
+    </div>
+  </div>
+</div>
